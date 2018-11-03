@@ -5,7 +5,9 @@ import cv2
 import numpy as np
 
 move = os.chdir("/home/pi/Pictures")
-take_photo = subprocess.call("raspistill -o image.jpg", shell = True)
+argv = sys.argv[1]
+command = "raspistill -o " + argv
+take_photo = subprocess.call(command, shell = True)
 
 image = cv2.imread("image.jpg", -1)
 
