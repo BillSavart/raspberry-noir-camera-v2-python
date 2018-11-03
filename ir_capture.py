@@ -7,11 +7,7 @@ import numpy as np
 ir_file_name = sys.argv[1]
 flir_file_name = sys.argv[2]
 
-if len(sys.argv) == 5:
-    file_path = sys.argv[4]
-    move = os.chdir(file_path)
-else:
-    move = os.chdir("pylepton/")
+move = os.chdir("pylepton/")
 
 if len(sys.argv) == 4:
     int_argv = int(sys.argv[3])
